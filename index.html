@@ -7,26 +7,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <div class="container" id="quiz"> 
-        <div class="quiz-header">
-          <h2 id="question">Question Text</h2>
-        </div>
-        <div>
-           <input type="radio" name="answer" class="answer" id="option1">
-           <label for="option1" id="option1_text">Answer1</label>
-   
-           <input type="radio" name="answer" class="answer" id="option2">
-           <label for="option2" id="option2_text">Answer2</label>
-   
-           <input type="radio" name="answer" class="answer" id="option3">
-           <label for="option3" id="option3_text">Answer3</label>
-   
-           <input type="radio" name="answer" class="answer" id="option4">
-           <label for="option4" id="option4_text">Answer4</label>
-        </div>
-          <button type="text" id="next">Next</button>      
-       </div>    
-    <script src="assets/js/script.js"></script>
-</body>
+<body> 
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <h2 id="question">Question Text</h2>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text">Answer</label>
+        </li>
+      </ul>
+    </div>
+    <button id="submit">Submit</button>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body> 
 </html>
