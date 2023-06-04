@@ -1,36 +1,37 @@
 const quizData = [
     {
-    question: "What is the Capital City of india?",
-    correct: "Delhi"
+    question: "What is the color of Milk?",
+    correct: "White"
     },
     {
-    question: "What is the color of sky?",
-    correct: "Blue"
+    question: "What is the color of apple ?",
+    correct: "Red"
+    },
+    {question: "What is the color of banana?",
+    correct: "Yellow"
     }
-]
+    ]
 
 const quizContainer = document.getElementById ('container')
 const questions = document.getElementById('question')
 const answers = document.getElementById ('answer')
+const result = document.getElementById ('result')
 
 let currentIndex = 0
-let score = 0
-showQuiz()
+loadQuiz()
 
-function showQuiz() {
-   const q = quizData[currentIndex]
-   questions.innerText= q.question
-   answers= ""
-}
-
-function finalAnswer () {
-    const userAnswer = answers
-    const correctAns = q.correct
-    if (userAnswer === correctAns) {
-        score++
-        currentindex++        
-    }       
+function loadQuiz() {
+    questions.innerText = quizData[currentIndex].question
     }
+
+function checkAnswer () {
+
+}
+    
+
+
+
+
 
 
 
