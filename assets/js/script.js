@@ -1,11 +1,11 @@
 const quizData = [
     {
     question: "What is the Capital City of india?",
-    value: "Delhi"
+    correct: "Delhi"
     },
     {
     question: "What is the color of sky?",
-    value: "Blue"
+    correct: "Blue"
     }
 ]
 
@@ -18,12 +18,21 @@ let score = 0
 showQuiz()
 
 function showQuiz() {
-   questions.innerText= quizData[currentIndex].question
+   const q = quizData[currentIndex]
+   questions.innerText= q.question
+   answers= ""
 }
 
-function userAnswer() {
-    if (answers == quizData[currentIndex].value){
-        alert ('Correct')
-        showQuiz()
-}
- }
+function finalAnswer () {
+    const userAnswer = answers
+    const correctAns = q.correct
+    if (userAnswer === correctAns) {
+        score++
+        currentindex++        
+    }       
+    }
+
+
+
+
+
