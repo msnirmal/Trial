@@ -12,28 +12,35 @@ const quizData = [
     }
     ]
 
-const quizContainer = document.getElementById ('container')
-const questions = document.getElementById('question')
-const answers = document.getElementById ('answer')
-const result = document.getElementById ('result')
+// Define variables for the game
+let currentIndex = 0;
+let score = 0;
 
-let currentIndex = 0
-loadQuiz()
+// Display the current riddle and reset the input field
+function showquiz() {
+  document.getElementById("question").textContent = quizData[currentIndex].question;
+  document.getElementById("guess").value = "";
+  }
 
-function loadQuiz() {
-    questions.innerText = quizData[currentIndex].question
+// Check the user's answer and update the score and hint
+function checkAnswer() {
+  const userAnswer = document.getElementById("guess").value.toLowerCase();
+  const correctAnswer = quizData[currentIndex].correct.toLowerCase();
+  if (userAnswer === correctAnswer) {
+    score++;
+    document.getElementById("score").textContent = `Score: ${score}`;
+    document.getElementById("answer-result").textContent = "Correct!";
+    currentIndex++;
+    if (currentIndex === quizData.length) {
+      alert("You have solved all the questions!");
+    } else {
+      showquiz();
     }
-
-function checkAnswer () {
-
+  } else {
+    document.getElementById("answer-result").textContent = "Incorrect.";
+  }
 }
-    
 
-
-
-
-
-
-
-
-
+// Initialize the game
+showquiz();
+document.getElementById("score").textContent = `Score: ${score}`;
