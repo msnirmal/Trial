@@ -1,14 +1,15 @@
-const quizData = [
+const qImages = [
     {
-    question: "What is the color of Milk?",
-    correct: "White"
+    questionimage: "assets/images/imageone.jpg",
+    correct: "Elephant"
     },
     {
-    question: "What is the color of apple ?",
-    correct: "Red"
+    questionimage: "assets/images/imagetwo.jpg",
+    correct: "Lion"
     },
-    {question: "What is the color of banana?",
-    correct: "Yellow"
+    {
+    questionimage: "assets/images/imagethree.jpg",
+    correct: "Tiger"
     }
     ]
 
@@ -18,20 +19,20 @@ let score = 0;
 
 // Display the current riddle and reset the input field
 function showquiz() {
-  document.getElementById("question").textContent = quizData[currentIndex].question;
+  document.getElementById("quiz-image").src = qImages[currentIndex].questionimage;
   document.getElementById("guess").value = "";
   }
 
 // Check the user's answer and update the score and hint
 function checkAnswer() {
   const userAnswer = document.getElementById("guess").value.toLowerCase();
-  const correctAnswer = quizData[currentIndex].correct.toLowerCase();
+  const correctAnswer = qImages[currentIndex].correct.toLowerCase();
   if (userAnswer === correctAnswer) {
     score++;
     document.getElementById("score").textContent = `Score: ${score}`;
     document.getElementById("answer-result").textContent = "Correct!";
     currentIndex++;
-    if (currentIndex === quizData.length) {
+    if (currentIndex === qImages.length) {
       alert("You have solved all the questions!");
     } else {
       showquiz();
