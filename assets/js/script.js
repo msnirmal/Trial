@@ -11,7 +11,7 @@ const qImages = [
   questionimage: "assets/images/imagethree.jpg",
   correct: "Tiger"
   }
-  ]
+  ] 
 
 // Define variables for the game
 let currentIndex = 0;
@@ -44,6 +44,10 @@ function nextImage() {
   } else {
     showquiz();
   }
+}
+
+function reloadQuiz(){
+  window.location.reload();
 }
 
 // Initialize the game
