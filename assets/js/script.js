@@ -4,7 +4,7 @@ const qImages = [
     correct: "Elephant"
     },
     {
-    questionimage: "assets/images/imagetwo.jpg",
+    questionimage: "assets/images/imagetwo.jpg", 
     correct: "Lion"
     },
     {
