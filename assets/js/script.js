@@ -31,17 +31,19 @@ if (userAnswer === correctAnswer) {
   score++;
   document.getElementById("score").textContent = `Score: ${score}/${qImages.length}`;
   document.getElementById("answer-result").textContent = "That was correct!";
+  } else {
+  document.getElementById("answer-result").textContent = "Incorrect.";
+  }
+}
+
+function nextImage() {
   currentIndex++;
+  document.getElementById("answer-result").textContent = "";
   if (currentIndex === qImages.length) {
     alert("End of Game, refresh page to restart");
   } else {
     showquiz();
   }
-} else {
-  document.getElementById("answer-result").textContent = "Incorrect.";
-  currentIndex++
-  showquiz();
-}
 }
 
 // Initialize the game
